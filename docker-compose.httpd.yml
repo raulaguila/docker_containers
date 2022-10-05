@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+
+  apache:
+
+    extends:
+    
+      file: ./docker/docker_httpd/docker-compose.yml
+      service: apache

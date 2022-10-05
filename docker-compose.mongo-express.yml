@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+
+  mongo_express:
+
+    extends:
+    
+      file: ./docker/docker_mongo/docker-compose.mongoexpress.yml
+      service: mongo_express

@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+
+  mongo:
+
+    extends:
+    
+      file: ./docker/docker_mongo/docker-compose.yml
+      service: mongo

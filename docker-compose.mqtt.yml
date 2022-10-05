@@ -1,0 +1,10 @@
+version: '3.2'
+
+services:
+
+  mosquitto:
+
+    extends:
+    
+      file: ./docker/docker_mqtt/docker-compose.yml
+      service: mosquitto
