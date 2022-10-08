@@ -3,7 +3,7 @@ version: '3.2'
 services:
   apache:
     image: httpd:latest
-    container_name: docker_apache_server
+    container_name: docker_apaches
     restart: always
     ports:
     - 8080:80
