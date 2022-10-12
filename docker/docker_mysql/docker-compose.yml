@@ -1,0 +1,24 @@
+version: '3.2'
+
+services:
+
+  mysql:
+    image: mysql:latest
+    container_name: docker_mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 9090:3306
+    volumes:
+      - ./db:/var/lib/mysql
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    environment:
+      MYSQL_ROOT_PASSWORD: 728536
+      MYSQL_USER: raul
+      MYSQL_PASSWORD: 728536
+
+###
+# Creating database dumps
+# docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' > ./all-databases.sql
+###
